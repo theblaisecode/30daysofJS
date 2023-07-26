@@ -1,6 +1,8 @@
 "use strict";
 
 /*
+### Exercise: Level 1
+
 1. Declare a variable named challenge and assign it to an initial value **'30 Days Of JavaScript'**.
 
 2. Print the string on the browser console using __console.log()__
@@ -51,9 +53,59 @@
 
 25. Use __repeat()__ method to print 30 Days Of JavaScript 2 times
 
+
+### Exercise: Level 2
+
+1. Using console.log() print out the following statement:
+
+   ```sh
+   The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.
+   ```
+
+2. Using console.log() print out the following quote by Mother Teresa:
+
+   ```sh
+   "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."
+   ```
+
+3. Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
+4. Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
+5. Check if 'on' is found in both python and jargon
+6. _I hope this course is not full of jargon_. Check if _jargon_ is in the sentence.
+7. Generate a random number between 0 and 100 inclusively.
+8. Generate a random number between 50 and 100 inclusively.
+9. Generate a random number between 0 and 255 inclusively.
+10.   Access the 'JavaScript' string characters using a random number.
+11.   Use console.log() and escape characters to print the following pattern.
+
+      ```js
+      1 1 1 1 1
+      2 1 2 4 8
+      3 1 3 9 27
+      4 1 4 16 64
+      5 1 5 25 125
+      ```
+
+12.   Use **substr** to slice out the phrase **because because because** from the following sentence:**'You cannot end a sentence with because because because is a conjunction'**
+
+
+
+### Exercises: Level 3
+
+1. 'Love is the best thing in this world. Some found their love and some are still looking for their love.' Count the number of word **love** in this sentence.
+2. Use **match()** to count the number of all **because** in the following sentence:**'You cannot end a sentence with because because because is a conjunction'**
+3. Clean the following text and find the most frequent word (hint, use replace and regular expressions).
+
+   ```js
+   const sentence =
+      "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
+   ```
+
+4. Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+
 */
 
-// ------------------------ Solution
+// ------------------------ Exercise 1 Solution
 // 1.
 const challenge = "'30 Days of JavaScript'";
 
@@ -136,3 +188,97 @@ console.log("30 Days of ".concat("JavaScript"));
 
 // 25.
 console.log(challenge.repeat(2));
+
+// ------------------------ Exercise 2 Solution
+// 1.
+console.log(
+   'The quote "There is no exercise better for the heart than reaching down and lifting people up." by John Holmes teaches us to help one another.'
+);
+
+// 2.
+console.log(
+   "\"Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.\""
+);
+
+// 3.
+const num = "10";
+console.log(typeof num === typeof 10);
+console.log(Number(num));
+
+// 4.
+const float = "9.8";
+console.log(float === 10);
+console.log(parseFloat(float) + 0.2);
+
+// 5.
+const checkIf = (python, jagon) => {
+   console.log(python.includes("on") && jagon.includes("on"));
+};
+checkIf("python", "jagon");
+
+// 6.
+const myHope = "I hope this course is not full of jargon";
+console.log(myHope.includes("jargon"));
+
+// 7.
+const randomNumber = Math.floor(Math.random() * 101);
+console.log(randomNumber);
+
+// 8.
+// You need to know the range of the random. Between 50 and 80, the range is 30 (80 - 50 = 30), then you add 1.
+// Therefore, the random would look like this: Math.floor(Math.random() * 31) + 50
+const anodaNum = Math.floor(Math.random() * 51) + 50;
+console.log(anodaNum);
+
+// Math.floor(Math.random() * (max - min) + min);
+const anodaNum2 = Math.floor(Math.random() * (100 - 50) + 50);
+console.log(anodaNum2);
+
+// 9.
+const randoNum = Math.floor(Math.random() * 256);
+console.log(randoNum);
+
+// 10.
+const word = "JavaScript";
+const diffNumber = Math.floor(Math.random() * word.length);
+console.log(word[diffNumber]);
+
+// \n: new line
+// \t: Tab, means 8 spaces
+// \\: Back slash
+// \': Single quote (')
+// \": Double quote (")
+
+// 11.
+console.log(
+   "1\t1\t1\t1\t1 \n2\t1\t2\t4\t8 \n3\t1\t3\t9\t27 \n4\t1\t4\t16\t64 \n5\t1\t5\t25\t125"
+);
+
+// 12.
+console.log(firstSentence.substr(31, 23));
+
+// ------------------------ Exercise 3 Solution
+// 1.
+let loveStory =
+   "Love is the best thing in this world. Some found their love and some are still looking for their love.";
+console.log(loveStory.match(/love/gi));
+
+// 2.
+console.log(firstSentence.match(/because/gi));
+
+// 3.
+const sentence =
+   "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
+console.log(sentence.replace(/[\%$@#&;]/g, ""));
+
+// 4.
+const extract =
+   "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.";
+
+let calc = extract.match(/\d+/g);
+let totalAnnualIncome = 0;
+
+for (let i = 0; i < calc.length; i++) {
+   totalAnnualIncome += parseInt(calc[i]);
+}
+console.log(totalAnnualIncome);
