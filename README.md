@@ -66,4 +66,4 @@ HTML, CSS, JS
 - Github - [@theblaisecode](https://github.com/theblaisecode)
 - Twitter - [@theblaisecode](https://twitter.com/theblaisecode)
 - LinkedIn - [@theblaisecode](https://www.linkedin.com/in/theblaisecode)
-- Portfolio - [theblaisecode.netlify.app](https://www.theblaisecode.netlify.app)
+- Portfolio - [theblaisecode.netlify.app](https://theblaisecode.netlify.app/)
