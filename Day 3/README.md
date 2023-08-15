@@ -148,4 +148,4 @@
 -  Github - [@theblaisecode](https://github.com/theblaisecode)
 -  Twitter - [@theblaisecode](https://twitter.com/theblaisecode)
 -  LinkedIn - [@theblaisecode](https://www.linkedin.com/in/theblaisecode)
--  Portfolio - [theblaisecode.netlify.app](https://theblaisecode.netlify.app/)
+-  Portfolio - https://theblaisecode.netlify.app
