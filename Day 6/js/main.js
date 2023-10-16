@@ -454,19 +454,14 @@ hexResult = `#${hexResult}`;
 console.log(hexResult);
 
 // 3.
-const rgbR = Math.floor(Math.random() * 256);
-const rgbB = Math.floor(Math.random() * 256);
-const rgbG = Math.floor(Math.random() * 256);
-console.log(rgbR, rgbB, rgbG);
+let rgbCalc = [];
+let result = "";
 
-let rgbCalc = "";
-
-for (let i = 1; i <= 3; i++) {
-  rgbCalc = Math.floor(Math.random() * 256);
-  console.log(rgbCalc);
+for (let i = 0; i < 3; i++) {
+  rgbCalc.push(Math.abs(Math.round(Math.random() * 255)));
 }
-console.log(`rgb(${rgbCalc})`);
-console.log(rgbCalc);
+result += `rgb(${rgbCalc})`
+console.log(result);
 
 // 4.
 let allCaps = [];
